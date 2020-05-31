@@ -18,6 +18,7 @@ let str = Number('54');
 
 console.log(str);
 
+
 //Write a JavaScript program that takes in different datatypes and prints out whether they are a:
 
 let a = true;
