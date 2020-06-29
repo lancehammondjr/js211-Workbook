@@ -33,6 +33,7 @@ const printBoard = () => {
 }
 
 
+
 function horizontalWin() {
   // Your code here
   for (let i=0; i<3; i++){
