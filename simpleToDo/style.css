@@ -1,0 +1,15 @@
+body {
+    font-family: 'New Rocker', cursive;
+}
+h1 {
+    font-size: 80px;
+}
+
+span {
+    margin-right: 4px;
+    font-size: 50px;
+}
+
+.done {
+    text-decoration: line-through;
+}
