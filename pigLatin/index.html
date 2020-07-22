@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 30px;
+            margin-top: 10px;
+        }
+        #pigWord {
+            margin-bottom: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Pig Latin</h1>
+    <div>
+        <div>
+            <label for="theword">Give me a word:</label>
+            <br>
+            <input type="text" id="givenWord">
+        </div>
+        <div>
+            <button id="button">Click</button>
+        </div>
+        <div>
+            <label for="pigWord" id="pigWord">The word in PigLatin:</label>
+            <p id="wordInPigLatin"></p>
+        </div>
+    </div>
+    <script>
+        'use strict'
+
+let theWord = document.getElementById('givenWord');
+
+let wordInPigLatin = document.getElementById('wordInPigLatin')
+
+document.getElementById('button').addEventListener('click', pigLatin)
+
+function pigLatin(word) { 
+    word = theWord.value;
+    word = word.toLowerCase().trim();
+    // Your code here
+    let vowels = word.match(/[aeiou]/);
+    let firstVowel = word.indexOf(vowels);
+    if (firstVowel > 0) {
+        wordInPigLatin.textContent = word.slice(firstVowel) + word.slice(0, firstVowel) + "ay";
+        console.log(word.slice(firstVowel) + word.slice(0, firstVowel) + "ay");
+    }
+    else {
+        wordInPigLatin.textContent = word + "yay";
+        console.log(word + "yay");
+    }
+    
+}
+    </script>
+</body>
+</html>
