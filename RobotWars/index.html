@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Robot War!!</title>
+    <style>
+        div {
+            border: 1px solid grey;
+        }
+        #player1 {
+            display: inline-block;
+        }
+        #player2 {
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Robot War!!</h1>
+<div>
+    <div id="player1">
+        You
+        <div id="player1Count"></div>
+    </div>
+    <div id="player2">
+        Computer
+        <div id="player2Count"></div>
+    </div>
+</div>    
+
+<br>
+
+    <div>
+        <button onclick="playTurn()" id="playTurnButton"> Play Turn</button>
+        <img id="player1Card">
+        <img id="player2Card">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
